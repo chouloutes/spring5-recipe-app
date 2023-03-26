@@ -30,6 +30,15 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Dev tools allows automatic restarts whenever a class changes. It does it faster because there are two class
+         loaders. There is one that loads all you dependencies that doesn't change and so it is loaded once and there is one that loads
+         all the classes that has only been changed allowing for a faster restart of the application.
+         Live reload plugin on Google Chrome when installed allows us to quickly see our changes when we make html server side changes or class changes
+         all we have to do is press build project under the build menu.
+         To automatically have code built upon changes then go to Settings -> Build, Execution, Deployment -> Compiler -> and select Build Project automatically
+         then go to Setting -> Advanced Setting -> and select Allow auto-make to start even if developed application is currently running. You may need to restart intelliJ for changes to take effect. Next
+         if we want changes to happen more rapidly we must change how quickly are files auto save to kick off the auto build process. Do this by going to this Setting -> Appearance & Behavior ->
+         System Settings -> and select Save files if the IDE is idle for (x) amount of seconds,  and make the amount of second(x) 1      -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
